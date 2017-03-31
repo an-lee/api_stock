@@ -10,6 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20170331221103) do
+
+  create_table "usstocks", force: :cascade do |t|
+    t.string   "juhe_gid"
+    t.string   "name"
+    t.string   "openpri"
+    t.string   "formpri"
+    t.string   "limit"
+    t.string   "uppic"
+    t.string   "priearn"
+    t.string   "beta"
+    t.date     "chtime"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end

@@ -1,0 +1,2 @@
+class Usstock < ApplicationRecord
+end
