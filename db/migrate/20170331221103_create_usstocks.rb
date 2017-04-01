@@ -3,6 +3,7 @@ class CreateUsstocks < ActiveRecord::Migration[5.0]
     create_table :usstocks do |t|
       t.string :juhe_gid
       t.string :name
+      t.string :lastestpri
       t.string :openpri
       t.string :formpri
       t.string :limit

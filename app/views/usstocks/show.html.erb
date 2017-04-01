@@ -1,0 +1,36 @@
+
+<div class="container">
+
+  <h2>查询结果</h2>
+
+  <table class="table">
+    <tr>
+      <thead>
+        <td>股票编号</td>
+        <td>股票名称</td>
+        <td>最新价格</td>
+        <td>今天开盘价</td>
+        <td>昨天收盘价</td>
+        <td>涨跌幅</td>
+        <td>涨跌额</td>
+        <td>市盈率</td>
+        <td>beta值</td>
+        <td>更新时间</td>
+      </thead>
+      <tbody>
+        <td><%= @usstock.juhe_gid %></td>
+        <td><%= @usstock.name %></td>
+        <td><%= @usstock.lastestpri %></td>
+        <td><%= @usstock.openpri %></td>
+        <td><%= @usstock.formpri %></td>
+        <td><%= @usstock.limit %></td>
+        <td><%= @usstock.uppic %></td>
+        <td><%= @usstock.priearn %></td>
+        <td><%= @usstock.beta %></td>
+        <td><%= @usstock.chtime %></td>
+      </tbody>
+    </tr>
+  </table>
+
+  <%= image_tag("http://image.sinajs.cn/newchartv5/usstock/monthly/#{@usstock.juhe_gid}.gif")%>
+</div>

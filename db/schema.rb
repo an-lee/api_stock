@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 20170331221103) do
   create_table "usstocks", force: :cascade do |t|
     t.string   "juhe_gid"
     t.string   "name"
+    t.string   "lastestpri"
     t.string   "openpri"
     t.string   "formpri"
     t.string   "limit"
