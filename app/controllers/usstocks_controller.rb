@@ -11,7 +11,7 @@ class UsstocksController < ApplicationController
   def create
     @usstock = Usstock.new(usstock_params)
     @usstock.save
-    response = RestClient.get "http://web.juhe.cn:8080/finance/stock/usa", :params => {:gid => @usstock.juhe_gid, :key => "1f2211355c59fc686e6af04159f76e82"}
+    response = RestClient.get "http://web.juhe.cn:8080/finance/stock/usa", :params => {:gid => @usstock.juhe_gid, :key => JUHE_CONFIG["api_key"]}
     data = JSON.parse(response.body)
     data["result"].each do |c|
       @usstock = Usstock.update(:juhe_gid => c["data"]["gid"], :name => c["data"]["name"],

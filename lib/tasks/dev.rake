@@ -1,7 +1,7 @@
 namespace :dev do
   task :fetch_stock => :environment do
     puts "Fetch stock data..."
-    response = RestClient.get "http://web.juhe.cn:8080/finance/stock/usa", :params => {:gid => "aapl", :key => "1f2211355c59fc686e6af04159f76e82"}
+    response = RestClient.get "http://web.juhe.cn:8080/finance/stock/usa", :params => {:gid => "aapl", :key => JUHE_CONFIG["api_key"]}
     data = JSON.parse(response.body)
 
     data["result"].each do |c|
